@@ -27,3 +27,7 @@ go install github.com/PuerkitoBio/goquery
 
 ![](images/Snipaste_2022-12-29_16-58-44.jpg)
 ![](images/Snipaste_2022-12-29_17-21-40.jpg)
+
+每次10个请求，每次延时2秒，请求太快怕触发安全验证，想要去掉延时，在config/config.go中去掉这行
+
+![](images/Snipaste_2022-12-29_17-24-36.jpg)
