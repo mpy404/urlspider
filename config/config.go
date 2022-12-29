@@ -74,7 +74,6 @@ var DisCardUrl = []string{"gov", "edu", "index"} // 配置过滤站点
 
 // discardURL 过滤站点
 func discardURL(url string) bool {
-
 	for i := 0; i < len(DisCardUrl); i++ {
 		re := regexp.MustCompile(DisCardUrl[i])
 		findString := re.FindString(url)
@@ -88,7 +87,7 @@ func discardURL(url string) bool {
 // setHeaders 设置请求头
 func setHeaders(method string, request *http.Request) *http.Request {
 	r := rand.New(rand.NewSource(time.Now().UnixNano()))
-	n := r.Intn(57)
+	n := r.Intn(54)
 	if method == "baidu" {
 		request.Header.Add("User-Agent", UserAgent[n])
 		request.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
