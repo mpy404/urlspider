@@ -92,12 +92,14 @@ func setHeaders(method string, request *http.Request) *http.Request {
 		request.Header.Add("User-Agent", UserAgent[n])
 		request.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
 		request.Header.Add("Host", "www.baidu.com")
+		request.Header.Add("Cookie", "")
 		return request
 	} else if method == "bing" {
 		request.Header.Add("User-Agent", UserAgent[n])
 		request.Header.Add("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9")
 		request.Header.Add("Host", "cn.bing.com")
 		request.Header.Add("Referer", "https://cn.bing.com/search?q=inurl%3aphp%3fid%3d1+%e5%85%ac%e5%8f%b8&first=10&FORM=PERE")
+		request.Header.Add("Cookie", "")
 		return request
 	}
 	return request
